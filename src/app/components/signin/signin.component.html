@@ -1,0 +1,60 @@
+<div class="login" [ngClass]="showLoginClass()">
+  <div class="popup" *ngIf="show">
+    <button
+      class="show-login"
+      (click)="showLoginForm()"
+      [ngClass]="showLogin ? 'login-active' : ''"
+    >
+      Login
+    </button>
+    <button
+      class="show-signup"
+      (click)="showSignUpForm()"
+      [ngClass]="showSignup ? 'signup-active' : ''"
+    >
+      Join us
+    </button>
+    <div class="close-btn" (click)="close()"><a href="/">&times;</a></div>
+    <div class="form" *ngIf="showLogin">
+      <h2>Login</h2>
+      <div class="form-element">
+        <input type="text" id="email" placeholder="Enter email" />
+      </div>
+      <div class="form-element">
+        <input type="password" id="password" placeholder="Enter password" />
+      </div>
+      <div class="form-element">
+        <input type="checkbox" id="remember-me" />
+        <label for="remember-me">Remember me</label>
+      </div>
+      <div class="form-element">
+        <button>Log in</button>
+      </div>
+      <div class="form-element">
+        <a href="#">Forgot password</a>
+      </div>
+    </div>
+    <div class="form" *ngIf="showSignup">
+      <h2>Signup</h2>
+      <div class="form-element">
+        <input type="text" id="Aadhar" placeholder="Enter Aadhaar number" />
+      </div>
+      <div class="form-element">
+        <input type="text" id="email" placeholder="Enter email" />
+      </div>
+      <div class="form-element">
+        <input type="password" id="password" placeholder="Enter password" />
+      </div>
+      <div class="form-element">
+        <input type="text" id="Mobile" placeholder="Enter mobile number" />
+      </div>
+      <div class="form-element">
+        <label for="DOB">DOB:</label><br />
+        <input type="date" id="DOB" name="DOB" />
+      </div>
+      <div class="form-element">
+        <button>Register</button>
+      </div>
+    </div>
+  </div>
+</div>

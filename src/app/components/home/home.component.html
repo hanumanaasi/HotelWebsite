@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="top-section">
+      <button class="top-btns"><a href="/">Book a stay</a></button>
+      <button class="top-btns"><a href="/login">Login</a></button>
+    </div>
+    <header>
+      <a href="" class="logo">Private.</a>
+      <button class="menu-btn" *ngIf="menu" (click)="openMenu()">
+        <img
+          src="assets\images\Hamburger_icon.png"
+          alt="menu"
+          width="30px"
+          height="30px"
+        />
+      </button>
+      <div class="nav" [ngClass]="cross ? 'active' : ''">
+        <div class="nav-items" [ngClass]="cross ? 'active' : ''">
+          <button class="cross-btn" *ngIf="cross" (click)="closeMenu()">
+            &times;
+          </button>
+          <a href="">Hotel</a>
+          <a href="">Villa</a>
+          <a href="">Restaurant</a>
+          <a href="">Toursim</a>
+          <a href="">Offers</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <div class="content">
+        <!-- hotel -->
+        <div class="content-msg" *ngIf="hotel">
+          <h1 style="font-weight: 900">The Luxury. <br /><span>Hotel</span></h1>
+          <p>
+            Our hotels dominate skylines, compliment natural beauty and adapt to
+            our guests’ every need. From Burj Al Arab’s billowing sail, to Zaha
+            Hadid’s architectural masterpiece Jumeirah Nanjing, each element is
+            designed with meticulous care and bold originality.
+          </p>
+          <a href="" type="button">Hotel</a>
+        </div>
+        <div class="content-img" *ngIf="hotel">
+          <img src="assets/images/hotel.jpg" alt="hotel-img" width="30%" height="30%">
+        </div>
+        <!-- villa -->
+        <div class="content-msg" *ngIf="villa">
+          <h1 style="font-weight: 900">The Luxury. <br /><span>Villa</span></h1>
+          <p>
+            Our hotels dominate skylines, compliment natural beauty and adapt to
+            our guests’ every need. From Burj Al Arab’s billowing sail, to Zaha
+            Hadid’s architectural masterpiece Jumeirah Nanjing, each element is
+            designed with meticulous care and bold originality.
+          </p>
+          <a href="" type="button">Villa</a>
+        </div>
+        <div class="content-img" *ngIf="villa">
+          <img src="assets/images/villa.jpg" alt="hotel-img" width="30%" height="30%">
+        </div>
+        <!-- restaurant -->
+        <div class="content-msg" *ngIf="restaurant">
+          <h1 style="font-weight: 900">
+            The Luxury. <br /><span>Restaurant</span>
+          </h1>
+          <p>
+            Our hotels dominate skylines, compliment natural beauty and adapt to
+            our guests’ every need. From Burj Al Arab’s billowing sail, to Zaha
+            Hadid’s architectural masterpiece Jumeirah Nanjing, each element is
+            designed with meticulous care and bold originality.
+          </p>
+          <a href="" type="button">Restaurant</a>
+        </div>
+        <div class="content-img" *ngIf="restaurant">
+          <img src="assets/images/restaurant.jpg" alt="hotel-img" width="30%" height="30%">
+        </div>
+        <!-- tourism -->
+        <div class="content-msg" *ngIf="tourism">
+          <h1 style="font-weight: 900">The Luxury. <br /><span>Tourism</span></h1>
+          <p>
+            Our hotels dominate skylines, compliment natural beauty and adapt to
+            our guests’ every need. From Burj Al Arab’s billowing sail, to Zaha
+            Hadid’s architectural masterpiece Jumeirah Nanjing, each element is
+            designed with meticulous care and bold originality.
+          </p>
+          <a href="" type="button">Tourism</a>
+        </div>
+        <div class="content-img" *ngIf="tourism">
+          <img src="assets/images/tourism.jpg" alt="hotel-img" width="30%" height="30%">
+        </div>
+  
+      </div>
+      
+
+      <div class="slider-navigation">
+        <hr style="border: 3px solid rgb(238, 254, 182);
+        border-radius: 5px; width: 30%;">
+        <div>
+          <button class="slider-btn" (click)="hotelSlide()"><img class="slider-img" src="assets/images/Hotel.png" height="40px" width="40px"  alt="hotel"></button>
+        </div>
+        <hr style="border: 3px solid rgb(238, 254, 182);
+        border-radius: 5px; width: 10px;">
+        <div>
+          <button class="slider-btn" (click)="villaSlide()"><img class="slider-img" src="assets/images/villa.png" height="40px" width="40px" alt="villa"></button>
+        </div>
+        <hr style="border: 3px solid rgb(238, 254, 182);
+        border-radius: 5px; width: 10px;">
+        <div>
+          <button class="slider-btn" (click)="restaurantSlide()"><img class="slider-img" src="assets/images/Restaurant.png" height="40px" width="40px" alt="restaurant"></button>
+        </div>
+        <hr style="border: 3px solid rgb(238, 254, 182);
+        border-radius: 5px; width: 10px;">
+        <div>
+          <button class="slider-btn" (click)="tourismSlide()"><img class="slider-img" src="assets/images/Tourism.png" height="40px" width="40px" alt="tourism"></button>
+        </div>
+
+        <hr style="border: 3px solid rgb(238, 254, 182);
+        border-radius: 5px; width: 30%;">
+      </div>
+      
+    </section>
+
+    <script type="text/javascript">
+      //         const menuBtn = document.querySelector(".menu-btn");
+      //         menuBtn.addEventListener("click",() =>{
+      //             menuBtn.classList.toggle("active");
+      //         });
+    </script>
+  </body>
+</html>

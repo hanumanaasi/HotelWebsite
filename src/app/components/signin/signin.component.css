@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+}
+
+.show-login,
+.show-signup {
+  padding: 6px 10px;
+  font-size: 10px;
+  font-weight: 500;
+  display: inline-flex;
+  float: right;
+  margin-right: 10px;
+  color: #222;
+  background-color: rgb(214, 229, 158);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(214, 229, 158);
+}
+
+.popup {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.25);
+  background-color: rgb(214, 229, 158);
+  width: 280px;
+
+  padding: 20px 30px;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border: 1px solid black;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: black;
+  color: rgb(214, 229, 158);
+  text-align: center;
+  line-height: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.popup .close-btn:hover {
+  background-color: #3e4859;
+}
+
+.popup .form h2 {
+  text-align: center;
+  color: black;
+  margin: 0px 0px 20px;
+  font-size: 20px;
+}
+
+.popup .form .form-element {
+  margin: 15px 0px;
+}
+
+.popup .form .form-element label {
+  font-size: 10px;
+  color: black;
+}
+
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"],
+.popup .form .form-element input[type="date"] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 4px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+::placeholder,
+name {
+  width: 100%;
+  margin-left: 50%;
+  font-size: 10px;
+  outline: none;
+  color: black;
+}
+
+.popup .form .form-element input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.popup .form .form-element button {
+  width: 50%;
+  height: 30px;
+  border: none;
+  outline: none;
+  margin-left: 3rem;
+  font-size: 10px;
+  background: black;
+  color: rgb(214, 229, 158);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.popup .form .form-element button:hover {
+  background-color: #3e4859;
+}
+
+.popup .form .form-element a {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-active {
+  background-color: black;
+  color: rgb(214, 229, 158);
+}
+
+.signup-active {
+  background-color: black;
+  color: rgb(214, 229, 158);
+}
+
+.home-trimmed {
+  width: calc(100%-18.236rem);
+  margin-left: 18.236rem;
+}
+
+.home-md-screen {
+  width: calc(100%-5rem);
+  margin-left: 5rem;
+}
+
+@media (max-width: 1040px) {
+  .popup {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 230px;
+  }
+
+  .show-login,
+  .show-signup {
+    padding: 6px 6px;
+  }
+
+  .popup .form h2 {
+    font-size: 15px;
+  }
+}
